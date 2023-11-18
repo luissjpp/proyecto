@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMPORTACIÓN Y EXPORTACIÓN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #4d2c16bb; /* Nuevo color de fondo */
+            margin: 0;
+            padding: 0;
+            color: #fff; /* Color de texto */
+        }
+
+        header {
+            background-color: #0aa317c5;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: #4d2c16bb;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(40, 189, 10, 0.781);
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #0aa317c5;
+            color: #fcfcfc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0.5em;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .descripcion-container {
+            text-align: left;
+            padding: 1em;
+            background-color: #45a049;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 1em;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .descripcion-container textarea {
+            width: calc(100% - 2em);
+            margin-top: 1em;
+            padding: 1em;
+            box-sizing: border-box;
+            border: 1px solid #1b1a1a;
+            border-radius: 5px;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        .descripcion-container textarea:focus {
+            outline: none;
+            border-color: #45a049;
+        }
+
+        footer {
+            margin-top: 20px;
+            color: #ffffff;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>IMPORTACIÓN Y EXPORTACIÓN</h1>
+    </header>
+
+    <div class="container">
+        <button onclick="mostrarFormulario('importacion')">
+            <img src="./img/1.webp" alt="Importación">
+            <br>
+            Importación
+        </button>
+        <button onclick="mostrarFormulario('exportacion')">
+            <img src="./img/2.webp" alt="Exportación">
+            <br>
+            Exportación
+        </button>
+        <button onclick="mostrarFormulario('dos')" >
+            <img src="./img/3.webp" alt="T-MEC">
+            <br>
+            T-MEC
+        </button>
+    
+        <button onclick="mostrarFormulario('tres')" >
+            <img src="./img/4.webp" alt="Proyecciones futuras">
+            <br>
+            Proyecciones futuras
+        </button>
+
+        <!-- Resto del código (sin cambios en el HTML) -->
+    </div>
+
+    <div class="descripcion-container" id="descripcion"></div>
+    <div id="formularioImportacion" class="descripcion-container" style="text-align: left; display: none;">
+        <h2>Que es la Importación</h2>
+        <textarea placeholder="La importación es un proceso fundamental en el ámbito comercial y económico que implica la introducción de bienes y servicios desde un país extranjero al país de destino. Este fenómeno se lleva a cabo a través de transacciones comerciales internacionales y es esencial para satisfacer las demandas y necesidades de los consumidores, así como para garantizar la disponibilidad de una amplia variedad de productos en el mercado nacional.
+
+        Existen varias razones por las cuales los países participan activamente en el proceso de importación:
+        
+        Acceso a Productos No Disponibles Localmente: La importación permite acceder a productos que no están fácilmente disponibles a nivel local o que pueden ser producidos de manera más eficiente en otros lugares. Esto contribuye a la diversificación de la oferta de bienes y servicios, ofreciendo a los consumidores una gama más amplia de opciones.
+        
+        Intercambio Internacional y Colaboración entre Naciones: La importación facilita el intercambio internacional y fomenta la colaboración entre naciones. A través de la importación, se establecen relaciones comerciales que pueden tener beneficios económicos y diplomáticos a largo plazo. Los acuerdos comerciales y tratados internacionales a menudo se basan en la facilitación y regulación de la importación y exportación.
+        
+        Proceso de Importación: El proceso de importación implica una serie de pasos, que incluyen la identificación de productos a importar, la negociación de términos comerciales, la realización de trámites aduaneros y el transporte de la mercancía. La aduana desempeña un papel crucial en este proceso al verificar y regular la entrada de bienes al país, aplicando aranceles y asegurando el cumplimiento de las normativas y regulaciones locales.
+        
+        Inclusión de Bienes Tangibles e Intangibles: Es importante destacar que la importación no se limita solo a bienes tangibles, sino que también puede incluir servicios, tecnología y conocimientos especializados. En el contexto de la globalización, la importación se ha convertido en un componente esencial para el crecimiento económico y el desarrollo sostenible, ya que permite a los países aprovechar los recursos y la experiencia disponibles a nivel internacional."></textarea>
+    </div>
+
+    <div class="descripcion-container" id="formularioExportacion" style="text-align: left; display: none;">
+        <h2>Que es la Exportación</h2>
+        <textarea placeholder="La exportación es un proceso comercial que implica la venta y envío de bienes y servicios producidos en un país a otros países. Este proceso es esencial para la economía global y permite a los países participantes aprovechar sus ventajas comparativas, expandir mercados y fomentar el crecimiento económico. Aquí hay algunos aspectos clave sobre la exportación:
+
+        Venta de Bienes y Servicios: En la exportación, las empresas producen bienes o servicios que se destinan a consumidores o empresas en otros países. Estos productos pueden incluir manufacturas, materias primas, productos agrícolas, servicios profesionales, entre otros.
+        
+        Diversificación de Mercados: La exportación permite a las empresas diversificar sus mercados. En lugar de depender únicamente del mercado interno, las empresas pueden llegar a nuevos clientes y aprovechar oportunidades de crecimiento en el extranjero.
+        
+        Generación de Ingresos y Empleo: La exportación contribuye significativamente a la generación de ingresos y empleo en un país. Las empresas exitosas en el mercado internacional pueden experimentar un aumento en sus ingresos, lo que a su vez puede impulsar la economía local.
+        
+        Competitividad Global: Participar en el mercado de exportación obliga a las empresas a volverse más competitivas. Deben mejorar la calidad de sus productos, optimizar procesos y adaptarse a los estándares internacionales para tener éxito en entornos comerciales más amplios.
+        
+        Proceso Logístico: La exportación implica una serie de pasos logísticos, incluida la preparación de la mercancía para el transporte, la gestión de la documentación aduanera, la selección de rutas de envío y la coordinación con agentes de aduanas y transportistas.
+        
+        Beneficios para la Economía Nacional: A nivel nacional, la exportación puede tener impactos positivos en la balanza comercial, contribuir al desarrollo económico y fortalecer la posición del país en la economía mundial.
+        
+        Incentivos y Apoyo Gubernamental: Muchos gobiernos ofrecen incentivos y apoyo a las empresas que participan en la exportación, como exenciones fiscales, subsidios y asistencia en la superación de barreras comerciales.
+        
+        En resumen, la exportación es una parte crucial de la actividad económica global, conectando mercados, generando ingresos y promoviendo el desarrollo económico tanto a nivel empresarial como nacional."></textarea>
+    </div>
+
+    <div class="descripcion-container" id="formularioDos" style="text-align: left; display: none;">
+        <h2>Que es el T-MEC</h2>
+        <textarea placeholder="El T-MEC, o Tratado entre México, Estados Unidos y Canadá, es un acuerdo comercial entre los tres países mencionados. Este tratado reemplazó al Tratado de Libre Comercio de América del Norte (TLCAN) y entró en vigor el 1 de julio de 2020. El T-MEC busca modernizar y mejorar las disposiciones comerciales entre los tres países.
+
+        Algunos de los aspectos clave del T-MEC incluyen:
+        
+        Reglas de Origen: Establece nuevas reglas para determinar el origen de los productos, con el objetivo de fomentar la producción y empleo en la región.
+        
+        Acceso a Mercados: Define las condiciones de acceso a los mercados de los tres países, abordando aranceles y barreras no arancelarias.
+        
+        Protección de Propiedad Intelectual: Incluye disposiciones para fortalecer la protección de derechos de propiedad intelectual, como patentes, derechos de autor y marcas.
+        
+        Ambiente Laboral: Contiene disposiciones relacionadas con estándares laborales para garantizar condiciones justas y equitativas para los trabajadores.
+        
+        Medio Ambiente: Incluye disposiciones para abordar temas ambientales y promover prácticas sostenibles."></textarea>
+    </div>
+
+    <div class="descripcion-container" id="formularioTres" style="text-align: left; display: none;">
+        <h2>Cuales son las proyecciones futuras</h2>
+        <textarea placeholder="El T-MEC, o Tratado entre México, Estados Unidos y Canadá, es un acuerdo comercial entre los tres países mencionados. Este tratado reemplazó al Tratado de Libre Comercio de América del Norte (TLCAN) y entró en vigor el 1 de julio de 2020. El T-MEC busca modernizar y mejorar las disposiciones comerciales entre los tres países.
+
+        Algunos de los aspectos clave del T-MEC incluyen:
+        
+        Reglas de Origen: Establece nuevas reglas para determinar el origen de los productos, con el objetivo de fomentar la producción y empleo en la región.
+        
+        Acceso a Mercados: Define las condiciones de acceso a los mercados de los tres países, abordando aranceles y barreras no arancelarias.
+        
+        Protección de Propiedad Intelectual: Incluye disposiciones para fortalecer la protección de derechos de propiedad intelectual, como patentes, derechos de autor y marcas.
+        
+        Ambiente Laboral: Contiene disposiciones relacionadas con estándares laborales para garantizar condiciones justas y equitativas para los trabajadores.
+        
+        Medio Ambiente: Incluye disposiciones para abordar temas ambientales y promover prácticas sostenibles.El T-MEC, o Tratado entre México, Estados Unidos y Canadá, es un acuerdo comercial entre los tres países mencionados. Este tratado reemplazó al Tratado de Libre Comercio de América del Norte (TLCAN) y entró en vigor el 1 de julio de 2020. El T-MEC busca modernizar y mejorar las disposiciones comerciales entre los tres países.
+
+        Algunos de los aspectos clave del T-MEC incluyen:
+        
+        Reglas de Origen: Establece nuevas reglas para determinar el origen de los productos, con el objetivo de fomentar la producción y empleo en la región.
+        
+        Acceso a Mercados: Define las condiciones de acceso a los mercados de los tres países, abordando aranceles y barreras no arancelarias.
+        
+        Protección de Propiedad Intelectual: Incluye disposiciones para fortalecer la protección de derechos de propiedad intelectual, como patentes, derechos de autor y marcas.
+        
+        Ambiente Laboral: Contiene disposiciones relacionadas con estándares laborales para garantizar condiciones justas y equitativas para los trabajadores.
+        
+        Medio Ambiente: Incluye disposiciones para abordar temas ambientales y promover prácticas sostenibles."></textarea>
+    </div>
+
+<footer>
+    Elaborado por: Perez Juarez Luis Javier, Ochoa Murillo Santiago Daniel, David Contreras Luna
+</footer>
+
+<script>
+    function mostrarFormulario(tipo) {
+        document.getElementById('formularioImportacion').style.display = tipo === 'importacion' ? 'block' : 'none';
+        document.getElementById('formularioExportacion').style.display = tipo === 'exportacion' ? 'block' : 'none';
+        document.getElementById('formularioDos').style.display = tipo === 'dos' ? 'block' : 'none';
+        document.getElementById('formularioTres').style.display = tipo === 'tres' ? 'block' : 'none';
+
+        // Mostrar la descripción
+        const descripcionElement = document.getElementById('descripcion');
+        const boton = document.querySelector(`button[data-descripcion][onclick="mostrarFormulario('${tipo}')"]`);
+        if (boton) {
+            const descripcion = boton.getAttribute('data-descripcion');
+            descripcionElement.innerHTML = `<p>${descripcion}</p>`;
+        }
+    }
+</script>
+
+</body>
+</html>
